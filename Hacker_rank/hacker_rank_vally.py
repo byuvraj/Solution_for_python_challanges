@@ -17,16 +17,18 @@ import sys
 
 def countingValleys(steps, path):
     # Write your code here
-    j=0
+    ans =0
+    vally =0
+    for i in path:
+        if i == 'D':
+            vally-=1
+        if i=='U':
+            vally+=1
+        print(vally)
+        if vally == 0 and i == 'U':
+            ans+=1
+    return ans
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
-
     steps = int(input().strip())
-
     path = input()
-
     result = countingValleys(steps, path)
-
-    fptr.write(str(result) + '\n')
-
-    fptr.close()
