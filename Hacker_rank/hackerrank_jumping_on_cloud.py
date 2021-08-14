@@ -13,8 +13,7 @@ import sys
 # The function accepts INTEGER_ARRAY c as parameter.
 #
 
-def jumpingOnClouds(c):
-    n = len(c)
+def jumpingOnClouds(c,n):
     ans = 0
     i =0
     while i <= n-3:
@@ -35,4 +34,4 @@ def jumpingOnClouds(c):
 if __name__ == '__main__':
     n = int(input().strip())
     c = list(map(int, input().rstrip().split()))
-    result = jumpingOnClouds(c)
+    result = jumpingOnClouds(c,n)
