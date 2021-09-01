@@ -2,6 +2,7 @@ def countTriplets(arr, r):
     count = 0
     dict = {}
     dictPairs = {}
+    
     for i in reversed(arr):
             if i*r in dictPairs:
                 print(i*r)
